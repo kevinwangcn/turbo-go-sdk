@@ -150,7 +150,9 @@ func (eb *EntityDTOBuilder) Create() (*proto.EntityDTO, error) {
 		LayeredOver:           eb.layeredOver,
 		ConsistsOf:            eb.consistsOf,
 		ConnectedEntities:     eb.connectedEntities,
+		KeepStandalone:        eb.keepStandalone,
 	}
+	fmt.Println("kwang modify sdk")
 	if eb.storageData != nil {
 		entityDTO.EntityData = &proto.EntityDTO_StorageData_{eb.storageData}
 	} else if eb.diskArrayData != nil {
